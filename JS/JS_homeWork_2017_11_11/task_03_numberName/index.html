@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS - task03</title>
+</head>
+<body>
+    <script type="text/javascript">
+		var arr = ["Ноль", "Один", "Два", "Три",
+				   "Четыре", "Пять", "Шесть",
+				   "Семь", "Восемь", "Девять"];
+		var value = Number(prompt("Введите целое число от 0 до 9"));
+
+		if (value >= 0 && value <= 9 && value === parseInt(value, 10)) {
+			alert("Название введенного целого числа: " + arr[value]); 
+		} else {
+			alert("Введено некорректное значение. Вводите целое число в указанном диапазоне.");
+		}
+	</script>
+</body>
+</html>

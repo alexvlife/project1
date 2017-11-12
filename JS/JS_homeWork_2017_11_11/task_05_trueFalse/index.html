@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS - task05</title>
+</head>
+<body>
+    <script type="text/javascript">
+		var numb1 = Number(prompt("Введите первое целое число", ''));
+		var numb2 = Number(prompt("Введите второе целое число", ''));
+		var numb3 = Number(prompt("Введите третье целое число", ''));
+
+		if (numb1 != parseInt(numb1, 10) || numb2 != parseInt(numb2, 10) || numb3 != parseInt(numb3, 10)) {
+			alert ("Введено некорректное значение. Вводите целые числа.");
+		} else if (numb1 === numb2 || numb1 === numb3 || numb2 === numb3 ) {
+			alert("true" + " - среди трех введенных целых чисел есть хотя бы одна пара совпадающих.");
+			} else {
+			alert("false" + " - среди трех введенных целых чисел нет ни одной пары совпадающих.");
+		}
+	</script>
+</body>
+</html>

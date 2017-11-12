@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS - task02</title>
+</head>
+<body>
+    <script type="text/javascript">
+		var value = Number(prompt("Введите целое число в диапазоне от -999 до 999", ''));
+
+		if (value != parseInt(value, 10) || value < -999 || value > 999) {
+			alert("Введены некорректные данные. Вводите целые числа в указанном диапазоне.");
+		} else if (value >= -999 && value <= -100) {
+			alert("Вы ввели число: " + value + " - это отрицательное трехзначное число");
+		} else if (value >= -99 && value <= -10) {
+			alert("Вы ввели число: " + value + " - это отрицательное двухзначное число");
+		} else if (value >= -9 && value <= -1) {
+			alert("Вы ввели число: " + value + " - это отрицательное однозначное число");
+		} else if (value >= 1 && value <= 9) {
+			alert("Вы ввели число: " + value + " - это положительное однозначное число");
+		} else if (value >= 10 && value <= 99) {
+			alert("Вы ввели число: " + value + " - это положительное двузначное число");
+		} else if (value >= 100 && value <= 999) {
+			alert("Вы ввели число: " + value + " - это положительное трехзначное число");
+		} else {
+		   alert("Вы ввели число: " + value + " - это нулевое число");
+		}
+	</script>
+</body>
+</html>

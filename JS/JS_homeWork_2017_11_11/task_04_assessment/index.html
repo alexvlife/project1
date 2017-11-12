@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS - task04</title>
+</head>
+<body>
+    <script type="text/javascript">
+		var arr = ["вообще ничего", "плохо",
+				   "неудовлетворительно",
+				   "удовлетворительно",
+				   "хорошо", "отлично"];
+		var value = Number(prompt("Введите оценку (целое число от 1 до 5):"));
+
+		if (value >= 1 && value <= 5 && value === parseInt(value, 10)) {
+			alert("Оценка: " + arr[value]);
+		} else {
+			alert("Введено некорректное значение. Вводите целое число в указанном диапазоне.");
+		}
+	</script>
+</body>
+</html>
