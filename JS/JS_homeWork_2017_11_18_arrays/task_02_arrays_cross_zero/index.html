@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+	<style>
+
+		tr {
+			background: lightgray;
+		}
+		
+		td {
+			width: 40px;
+			height: 40px;
+			border: 1px solid black;
+			text-align: center;
+			font-family: Arial;
+			font-size: 2em;
+		}
+		
+	</style>
+	
+    <script>
+		var area = "<table>";
+		var areaValue = [ 1, null, 0, null, 1, null, null, null, null ];
+		
+		for(var i = 0; i < areaValue.length; i++) {
+			if(areaValue[i] == 1) {
+				areaValue[i] = 'X';
+			} else if (areaValue[i] == 0) {
+				areaValue[i] = 'O';
+			} else {
+				areaValue[i] = '';
+			}
+		}
+
+		for(var j = 0; j < areaValue.length; j = j + 3){
+		
+			area = area + "<tr><td>" + areaValue[j] + "</td><td>" + areaValue[j + 1] + "</td><td>" + areaValue[j + 2] + "</td></tr>";
+			
+		}
+
+		area = area + "</table>";
+		
+		document.write(area);
+
+	</script>
+</body>
+</html>

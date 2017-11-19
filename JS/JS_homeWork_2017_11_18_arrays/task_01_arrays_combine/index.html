@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+		var arr_A = [12, 4, 3, 10, 1, 20];
+		var arr_B = [-3, -7, -100, -33];
+		var arr_C_first = arr_B.concat(arr_A);
+		var arr_C_end = arr_A.concat(arr_B);
+		
+		alert("Массив A = " + "[" + arr_A + "];" + "\n"
+			   + "Массив B = "+ "[" + arr_B + "];"+ "\n"
+			   + "Массив С = " + "[" + arr_C_end + "]" + " (массив B добавлен в конец массива A);" + "\n"
+			   + "Массив С = " + "[" + arr_C_first + "]" + " (массив B добавлен в начало массива A).");
+	</script>
+</body>
+</html>
