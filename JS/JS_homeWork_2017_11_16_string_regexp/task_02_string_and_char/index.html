@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+	<body>
+
+		<script>
+			/*Задача:
+			Дана строка S и символ C.
+			Удвоить каждое вхождение символа C в строку S. */
+			
+			var str = 'Это простая текстовая строка';
+
+			alert('Исходный текст:' + '\n\n' + '\"' + str + '\"');
+
+			var symbol = prompt('Введите букву, которую хотите удвоить в тексте:', '');
+			var regexp = new RegExp (symbol, 'ig');
+
+			alert('Строка после удвоения символа: ' + '\"' + symbol + '\"' + '\n\n'
+				  + '\"' + str.replace(regexp, (symbol + symbol)) + '\"');
+
+		</script>
+
+	</body>
+	
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+	<body>
+
+		<script>
+			/*Задача:
+			Дана строка, изображающая целое число.
+			Вывести сумму цифр этого числа. */
+			
+			var str = prompt('Введите целое число:', '');
+			var sumDigitsStr = 0;
+
+			for (var i = 0; i < str.length; i++) {
+
+				sumDigitsStr += Number(str[i]);
+				
+			}
+
+			alert('Сумма цифр введенного числа равна: ' + sumDigitsStr);
+
+		</script>
+
+	</body>
+
+</html>
