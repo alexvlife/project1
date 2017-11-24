@@ -13,7 +13,7 @@
 			/*Задача:
 			Напишите функцию (), которая в зависимости от переданных 
 			в нее целочисленных аргументов "количество дней", будет выводить 
-			слово "день" в нужно форме ("если передали - 1, то 1 день", 
+			слово "день" в нужной форме ("если передали - 1, то 1 день", 
 			"если передали - 3, то 3 дня" и т.д). */
 			
 			/*
@@ -26,21 +26,23 @@
 			
 			var days = prompt('Введите количество дней (целое число больше или равное 0):');
 
-			var regexpOneLastNumb = /\d{1}$/ig; 
-			var oneLastNumb = +(days.match(regexpOneLastNumb));
-						
-			var regexpTwoLastNumb = /\d{2}$/ig; 
-			var twoLastNumb = +(days.match(regexpTwoLastNumb));
-			
-				if(oneLastNumb === 0 || oneLastNumb >= 5 && oneLastNumb <= 9 || twoLastNumb >= 11 && twoLastNumb <= 14){
-					alert(days + ' дней');
-				} else if (oneLastNumb === 1){
-					alert(days + ' день');
-				} else if (oneLastNumb >= 2 && oneLastNumb <= 4){
-					alert(days + ' дня');
-				} /* else {
-					alert('Необходимо ввести целое число больше или равно 0');				
-				}*/
+			function getDays(days) {
+				var regexpOneLastNumb = /\d{1}$/ig; 
+				var oneLastNumb = +(days.match(regexpOneLastNumb));
+							
+				var regexpTwoLastNumb = /\d{2}$/ig; 
+				var twoLastNumb = +(days.match(regexpTwoLastNumb));
+				
+					if(oneLastNumb === 0 || oneLastNumb >= 5 && oneLastNumb <= 9 || twoLastNumb >= 11 && twoLastNumb <= 14){
+						alert(days + ' дней');
+					} else if (oneLastNumb === 1){
+						alert(days + ' день');
+					} else if (oneLastNumb >= 2 && oneLastNumb <= 4){
+						alert(days + ' дня');
+					} 
+			}
+
+			getDays(days);
 			
 		</script>
 
