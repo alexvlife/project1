@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+	<body>
+
+		<script>
+			/*Задача:
+			Построить объект студент со свойствами:
+			Имя, Фамилия, Возраст, Интересы (в виде массива), Место обучения.
+			Написать отдельную функцию, которой передается объект студент, 
+			а она выводит его содержимое. */
+			
+		 //Объект 1 - первый студент:
+
+			var objStudent1 = {};
+				objStudent1.firstName = "Иван";
+				objStudent1.lastName = "Иванов";
+				objStudent1.age = 20;
+
+			var objMusic = {};
+				objMusic.music1 = "pop";
+				objMusic.music2 = "electronic";
+
+			var objSportGame = {};
+				objSportGame.sportGame1 = "bowling";
+				objSportGame.sportGame2 = "football";
+
+			objStudent1.interests = [objMusic, objSportGame];
+			objStudent1.education = "University";
+
+
+		 //Объект 2 - второй студент:
+
+			var objStudent2 = {
+
+				firstName: "Петр",
+				lastName: "Петров",
+				age: 21,
+				interests: [
+						objMusic = {
+							music1: "jazz",
+							music2: "rock"
+						},
+						objSportGame = {
+							sportGame1: "hockey",
+						}				
+					],
+				education: "University"
+	
+			};
+		
+			//Функция, которой передается объект студент, а она выводит его содержимое:
+
+			function getStudInfo(objStudent){
+			
+				for(var key in objStudent) {
+				
+					if(typeof objStudent[key] == "object") {		 
+						console.log(key + ":");
+						for (var i = 0; i < objStudent[key].length; i++){
+							console.log("       " + "Категория " + (i+1) + ":");
+							for(var key3 in objStudent[key][i]) {
+								 console.log("                 " + key3 + ": " + objStudent[key][i][key3]);
+							}	
+						}
+					} else {
+						console.log(key + ": " + objStudent[key]);
+						
+					}
+				}
+			}
+
+			//выводим в консоль данные о студентах
+
+			console.log("Информация о студентах:");
+			console.log("");
+			getStudInfo(objStudent1);
+			console.log("");
+			getStudInfo(objStudent2);
+
+		</script>
+
+	</body>
+
+</html>

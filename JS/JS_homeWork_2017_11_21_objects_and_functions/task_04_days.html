@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<script>
+			/*Задача:
+			Напишите функцию (), которая в зависимости от переданных 
+			в нее целочисленных аргументов "количество дней", будет выводить 
+			слово "день" в нужно форме ("если передали - 1, то 1 день", 
+			"если передали - 3, то 3 дня" и т.д). */
+			
+			/*
+			
+			0 дней 5-20 дней 25-30 дней
+			1 день 21 день
+			2-4 дня 22-24 дня
+			
+			*/
+			
+			var days = prompt('Введите количество дней (целое число больше или равное 0):');
+
+			var regexpOneLastNumb = /\d{1}$/ig; 
+			var oneLastNumb = +(days.match(regexpOneLastNumb));
+						
+			var regexpTwoLastNumb = /\d{2}$/ig; 
+			var twoLastNumb = +(days.match(regexpTwoLastNumb));
+			
+				if(oneLastNumb === 0 || oneLastNumb >= 5 && oneLastNumb <= 9 || twoLastNumb >= 11 && twoLastNumb <= 14){
+					alert(days + ' дней');
+				} else if (oneLastNumb === 1){
+					alert(days + ' день');
+				} else if (oneLastNumb >= 2 && oneLastNumb <= 4){
+					alert(days + ' дня');
+				} /* else {
+					alert('Необходимо ввести целое число больше или равно 0');				
+				}*/
+			
+		</script>
+
+	</body>
+
+</html>
