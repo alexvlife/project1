@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+	<body>
+
+		<script>
+			/*Задача:
+			Единицы длины пронумерованы следующим образом: 
+			1 — дециметр, 2 — километр, 
+			3 — метр, 4 — миллиметр, 5 — сантиметр. 
+			Дан номер единицы длины и длина 
+			отрезка L в этих единицах (вещественное число). 
+			Вывести длину данного отрезка в метрах.
+			 */
+
+			var typeOfLength = +(prompt("Выберите единицу измерения длины от 1 до 5, где: \n" +
+									"1 - дециметр;\n" +
+									"2 - километр;\n" +
+									"3 - метр;\n" +
+									"4 - миллиметр;\n" +
+									"5 - сантиметр;\n"));
+									
+			var length = +(prompt("Введите длину отрезка, которую надо перевести в метры."));
+			
+			var lengthInM;
+			
+			switch(typeOfLength) {
+			
+				case 1:
+						lengthInM = length/10;
+						alert(lengthInM + " м");
+						break;				
+				case 2:
+						lengthInM = length*1000;
+						alert(lengthInM + " м");
+						break;					
+				case 3:
+						lengthInM = length;
+						alert(lengthInM + " м");
+						break;				
+				case 4:
+						lengthInM = length/1000;
+						alert(lengthInM + " м");
+						break;				
+				case 5:
+						lengthInM = length/100;
+						alert(lengthInM + " м");
+						break;		
+	
+				default:
+						alert("Введены некорректные данные...");						
+			}			
+			 
+			 
+			 
+		</script>
+
+	</body>
+
+</html>

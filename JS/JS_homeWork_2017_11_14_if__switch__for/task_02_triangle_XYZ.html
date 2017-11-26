@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+	<body>
+
+		<script>
+			/*Задача:
+			Есть три вершины. Координаты X, Y, Z заданы 
+			как целые числа.  Нужно определить - 
+			является ли треугольник с заданными 
+			координатами прямоугольным.
+			 */
+
+			var Ax1 = parseInt(prompt('Введите 1-ю координату X вершины A (целое число):', ''));
+			var Ay1 = parseInt(prompt('Введите 2-ю координату Y вершины A (целое число):', ''));
+			var Az1 = parseInt(prompt('Введите 3-ю координату Z вершины A (целое число):', ''));
+			var Bx2 = parseInt(prompt('Введите 1-ю координату X вершины B (целое число):', ''));
+			var By2 = parseInt(prompt('Введите 2-ю координату Y вершины B (целое число):', ''));
+			var Bz2 = parseInt(prompt('Введите 3-ю координату Z вершины B (целое число):', ''));
+			var Cx3 = parseInt(prompt('Введите 1-ю координату X вершины C (целое число):', ''));
+			var Cy3 = parseInt(prompt('Введите 2-ю координату Y вершины C (целое число):', ''));
+			var Cz3 = parseInt(prompt('Введите 3-ю координату Z вершины C (целое число):', ''));
+			
+			
+			/*Известно, что треугольник является прямоугольным,
+			если квадрат большей из его сторон равен сумме квадратов двух других сторон.*/
+
+			//Найдем длины сторон нашего треугольника.
+			
+			var AB, BC, AC;
+			
+			AB = Math.sqrt(Math.pow((Bx2-Ax1),2) + Math.pow((By2-Ay1),2) + Math.pow((Bz2-Az1),2));
+			BC = Math.sqrt(Math.pow((Cx3-Bx2),2) + Math.pow((Cy3-By2),2) + Math.pow((Cz3-Bz2),2));
+			AC = Math.sqrt(Math.pow((Cx3-Ax1),2) + Math.pow((Cy3-Ay1),2) + Math.pow((Cz3-Az1),2));
+			
+			if (
+				Math.pow(AB,2) === ( Math.pow(BC,2) + Math.pow(AC,2) ) ||
+			    Math.pow(BC,2) === ( Math.pow(AB,2) + Math.pow(AC,2) ) ||
+			    Math.pow(AC,2) === ( Math.pow(AB,2) + Math.pow(BC,2) )
+				) {
+					alert('Треугольник с заданными координатами - прямоугольный');
+				} else {
+					alert('Треугольник с заданными координатами - НЕпрямоугольный');	
+				}
+				
+		</script>
+
+	</body>
+
+</html>

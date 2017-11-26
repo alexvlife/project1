@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+	<body>
+
+	<style>
+		
+		td {
+			width: 40px;
+			height: 40px;
+			border: 1px solid black;
+			text-align: center;
+			font-family: Arial;
+			font-size: 1.5em;
+			background: lightgray;
+		}
+		
+	</style>
+	
+    <script>
+			/*Задача:
+			Вывести используя (document.write) таблицу 
+			умножения чисел до 10.
+			 */
+	
+		var area = '<table>';
+		var areaHead = '<td style = "background-color: lightgreen; font-size: 2em;">';
+		
+		for(var j = 0; j <= 10; j++){
+			area = area + '<tr>' + areaHead + j + '</td>';
+			
+			for(var i = 1; i <= 10; i++){
+				if(j === 0){
+				area = area + areaHead + i + '</td>';
+				} else {
+					area = area +  '<td>' + i*j + '</td>';
+				}			
+			}
+			area = area + '</tr>';
+		}
+		
+		area = area + '</table>';
+		
+		document.write(area);
+			 
+		</script>
+
+	</body>
+
+</html>
