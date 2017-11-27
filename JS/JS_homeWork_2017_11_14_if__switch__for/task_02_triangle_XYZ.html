@@ -39,17 +39,17 @@
 			AB = Math.sqrt(Math.pow((Bx2-Ax1),2) + Math.pow((By2-Ay1),2) + Math.pow((Bz2-Az1),2));
 			BC = Math.sqrt(Math.pow((Cx3-Bx2),2) + Math.pow((Cy3-By2),2) + Math.pow((Cz3-Bz2),2));
 			AC = Math.sqrt(Math.pow((Cx3-Ax1),2) + Math.pow((Cy3-Ay1),2) + Math.pow((Cz3-Az1),2));
-			
+			 
 			if (
-				Math.pow(AB,2) === ( Math.pow(BC,2) + Math.pow(AC,2) ) ||
-			    Math.pow(BC,2) === ( Math.pow(AB,2) + Math.pow(AC,2) ) ||
-			    Math.pow(AC,2) === ( Math.pow(AB,2) + Math.pow(BC,2) )
+				Math.round(Math.pow(AB,2)) === Math.round( Math.pow(BC,2) + Math.pow(AC,2) ) ||
+			    Math.round(Math.pow(BC,2)) === Math.round( Math.pow(AB,2) + Math.pow(AC,2) ) ||
+			    Math.round(Math.pow(AC,2)) === Math.round( Math.pow(AB,2) + Math.pow(BC,2) )
 				) {
 					alert('Треугольник с заданными координатами - прямоугольный');
 				} else {
 					alert('Треугольник с заданными координатами - НЕпрямоугольный');	
 				}
-				
+			
 		</script>
 
 	</body>
