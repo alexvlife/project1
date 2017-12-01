@@ -6,24 +6,26 @@
 		
 		//поиск минимального элемента в переданном массиве;
 		findMin: function(arr){
-		
+			
+			var minTemp = arr[0];		
 			for (var i = 1; i < arr.length; i++) {
-				if(min > arr[i])
-					min = arr[i];	
+				if(minTemp > arr[i])
+					minTemp = arr[i];	
 			}
 			
-			return min;
+			return minTemp;
 		},
 		
 		//поиск максимального элемента в переданном массиве;	
 		findMax: function(arr){
-		
+			
+			var maxTemp = arr[0];
 			for (var i = 1; i < arr.length; i++) {
-				if(max < arr[i])
-					max = arr[i];	
+				if(maxTemp < arr[i])
+					maxTemp = arr[i];	
 			}
 			
-			return max;
+			return maxTemp;
 		},		
 		
 		
@@ -44,37 +46,7 @@
 		arrayClone: function(arr){
 			
 			return arrClone = arr.slice();
-		},			
-		
-		
-		
-		
-		
-		
-		remove: function(arr, ind){
-			arr.splice(ind,1);
-			return arr;
 		},
-		
-		repeat: function(str, count){
-			var newStr = '';
-		
-			for(var i = 0; i < count; i++){
-				newStr += str;
-			}
-			return newStr;
-		},
-		
-		pluck:function(arr,strName){ //strName - имя свойства
-			var arrN = [];
-			var temp;
-			for(var i = 0; i < arr.length; i++){
-				
-				temp = arr[i][strName];
-				arrN.push(temp);
-			}
-			return arrN;
-		}
 		
 	}
 }()); 
