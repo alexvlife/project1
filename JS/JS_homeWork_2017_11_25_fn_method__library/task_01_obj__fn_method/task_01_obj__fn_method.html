@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+	<body>
+
+		<script>
+			/*Задача:
+			Построить объект студент:
+			- свойства: Имя, Фамилия, Возраст, 
+			Интересы (в виде массива), Место обучения.
+			- метод выводящий в консоль биографическую 
+			справку в виде, например: «Иван Петров. 21 год. 
+			Интересы: программирование, музыка, аниме. Учится в ИТМО.
+			*/
+			
+			var objStudent = {
+
+				firstName: "Иван",
+				lastName: "Петров",
+				age: 21,
+				interests: [
+						{interest1: "программирование"},
+						{interest2: "музыка"},
+						{interest3: "аниме"}				
+				],
+				university: "ИТМО",
+				
+				biogInfo: function (){
+				
+					console.log(this.firstName + ' ' + 
+								this.lastName + '.' + ' ' +
+								this.age + ' год. ' +
+								'Интересы: ' + this.interests[0].interest1 + ', ' +
+											   this.interests[1].interest2 + ', ' + 
+											   this.interests[2].interest3 + '. ' +
+								'Учится в ' + this.university + '.');
+				
+				}
+				
+			};
+			
+			objStudent.biogInfo();
+			
+		</script>
+
+	</body>
+
+</html>

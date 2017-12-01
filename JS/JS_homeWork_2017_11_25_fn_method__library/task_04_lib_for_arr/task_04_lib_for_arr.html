@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <script src="lib.js"></script>
+	
+	<script>
+		/*
+		Написать свою подключаемую 
+		js библиотеку для работы 
+		с массивом, хранящим целые числа.
+		Библиотека должна обладать следующими методами:
+		- поиск минимального элемента 
+		в переданном массиве;
+		- поиск максимального
+		элемента в переданном массиве;
+		- расчет среднего 
+		арифметического значения элементов переданного массива;
+		- создание копии (клонирование) 
+		переданного массива.
+		*/
+	
+	
+		var arr = [11,31,14,15,61,7,8,19,11];
+		
+		console.log('Исходный массив arr: \n' + arr + '\n\n');		
+		
+		var min = arr[0];
+		mySecondLib.findMin(arr);
+		console.log('Минимальный элемент массива = \n' + min);
+		
+		var max = arr[0];
+		mySecondLib.findMax(arr);
+		console.log('Максимальный элемент массива = \n' + max);	
+		
+		var averageValue;
+		mySecondLib.calcAverage(arr);
+		console.log('Среднее арифметическое значение = \n' + averageValue);
+		
+		var arrClone = [];
+		mySecondLib.arrayClone(arr);
+		console.log('Клон массива arr: \n' + arrClone);		
+		
+	</script>
+</body>
+</html>
