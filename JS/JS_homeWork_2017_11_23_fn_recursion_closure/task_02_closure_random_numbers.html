@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+	<body>
+
+		<script>
+			/*Задача:
+			Сделайте функцию, каждый вызов который будет генерировать случайные числа 
+			от 1 до 100, но так, чтобы они не повторялись, пока не будут перебраны все 
+			числа из этого промежутка. Решите задачу через замыкания - в замыкании должен 
+			хранится массив чисел, которые уже были сгенерированы функцией.  */
+
+			function generatorNumbers() {
+
+				var arrOfRandNumbs = [];
+				var randNumb;
+				var min = 1;
+				var max = 100;
+				var z = 0;
+				
+				//формируем массив из случайных чисел
+				for(var i = min; i <= max; i++){
+					getRandom(min, max);
+					arrOfRandNumbs.push(randNumb);
+					
+					if(arrOfRandNumbs.length >= 1){
+						for(var j = 0; j <= arrOfRandNumbs.length - 1; j++){
+
+							for(var k = j+1; k <= arrOfRandNumbs.length; k++){
+								if(arrOfRandNumbs[j] === arrOfRandNumbs[k]){
+									arrOfRandNumbs.splice(k, 1);
+									i--;
+								}							
+							}																		 	
+						}											 	
+					}				
+				}
+
+				//функция генерации случайных чисел в заданном диапазоне
+				function getRandom(min, max){
+					randNumb = Math.floor(Math.random()*(max-min+1)+min);
+					return randNumb;
+				}	
+						
+				return function(){
+					return arrOfRandNumbs[z++];
+				}
+			}
+					
+		var counter1 = generatorNumbers();
+		
+		console.log('1-я последовательность случайных чисел:');
+		console.log(counter1());
+		console.log(counter1());
+		console.log(counter1());	
+		console.log(counter1());	
+		console.log(counter1());		
+
+		console.log('\n');
+		
+		var counter2 = generatorNumbers();
+		
+		console.log('2-я последовательность случайных чисел:');
+		console.log(counter2());
+		console.log(counter2());
+		console.log(counter2());	
+		console.log(counter2());	
+		console.log(counter2());	
+
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+	<body>
+
+		<script>
+		
+			/*Задача:
+			Написать функцию вычисляющую факториал числа с использованием рекурсии.
+			Факториал числа - это число, умноженное на себя минус один, затем на себя 
+			минус два и так далее, до единицы. Обозначаетс n!
+			Определение факториала можно записать как: n! = n * (n - 1) * (n - 2) * ...*1 */
+
+			var x, xModif;
+
+			requestNumber()
+			
+			function requestNumber() {
+				x = prompt('Введите положительное целое число для расчета факториала:');
+				xModif = Number(x);
+				
+				if (x === ''){
+					alert('Вы ничего не ввели \n\nПовторите попытку.');	
+					return requestNumber();					
+				} else if (x === null){
+					alert('Пока.');				
+				} else if (xModif >= 0 ){
+					alert('Факториал ' + xModif + ' равен: ' + factorial(xModif));
+					x = confirm('Хотите узнать факториал другого числа?');
+					
+					if(x){
+						return requestNumber();
+					} else {
+						alert('Пока.');						
+					}
+					
+				} else {
+					alert('Введено некорректное значение... \n\n' +
+					      '"Факториа́л — функция, определённая на множестве неотрицательных целых чисел".' +
+						  '\n\nПовторите попытку.');
+					return requestNumber();
+				}
+			}	
+
+			function factorial(n) {
+				if (n === 0 || n === 1) {
+					return 1;
+				} else if (n >= 2) {
+					return n * factorial(n-1);
+				}
+			}
+			
+		</script>
+
+	</body>
+
+</html>
