@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -7,14 +7,49 @@
 <body>
 
     <script>
+		/*Задача:
+		Задан массив - [12,4,3,10,1,20]
+		необходимо отсортировать его в порядке возрастания, 
+		при этом не использовать готовый метод sort и методы разобранные на занятии.
+		*/
 
-	var arr = [12,4,3,10,1,20];
+		//Сортировка подсчётом 
+		//(для каждого элемента массива подсчитывается количество элементов, меньших, чем он.)
 
+		var arr = [12,4,3,10,1,20];
+		var n = arr.length;
+		var arrTemp = [];
+		var arrModif = [];
 
+		for (var i = 0; i < n; i++){
+			arrTemp[ i ] = 0; //делаем промежуточный массив непустым.
+		}
 
-			
-			alert(A);
-			
+		for (var i = 0; i < n-1; i++){
+
+			for (var j = i+1; j < n; j++){
+	  
+			   if (arr[ i ] < arr[j]){
+				  arrTemp[j]++;
+			   } else{
+				  arrTemp[i]++;
+			   }
+			}
+		}
+
+		for (var i = 0; i < n; i++){
+			arrModif[arrTemp[i]] = arr[i];
+		}
+
+		console.log('Исходный массив' + '\n' + arr);
+		console.log('\n');
+
+		console.log('Промежуточный массив' + '\n' + arrTemp);
+		console.log('\n');;
+
+		console.log('Отсортированный массив' + '\n' + arrModif);
+	
 	</script>
+	
 </body>
 </html>
