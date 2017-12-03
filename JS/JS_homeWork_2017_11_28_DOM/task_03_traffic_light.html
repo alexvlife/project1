@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+	<!--
+
+	Задача:
+
+		Создать светофор (красный, желтый, 
+		зелёный). Переключать цвет у светофора 
+		через каждые 2 сек сверху вниз и снизу вверх. 
+
+	-->
+	
+	<div class="traffic_light">
+		<div class="params color-red"><div id="red" class="params2"></div></div>
+		<div class="params color-yellow"><div  id="yellow" class="params2"></div></div>
+		<div class="params color-green"><div id="green" class="params2"></div></div>
+	</div>
+	
+	<style>
+	
+		.traffic_light {
+			width: 150px;
+			height: 450px;
+			background-color: black;
+		}
+		.params{
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+		}
+		.color-red{
+			background-color: red;
+		}
+		.color-yellow{
+			background-color: yellow;
+		}
+		.color-green{
+			background-color: green;
+		}
+		.params2{
+			width: inherit;
+			height: inherit;
+			border-radius: inherit;
+			background-color:gray;
+		}
+		.on{
+			background-color: transparent;
+		}
+
+	</style>
+	
+	<script>
+	
+		var elRed = document.getElementById('red');
+		var elYellow = document.getElementById('yellow');
+		var elGreen = document.getElementById('green');
+	
+		function changeColor(){
+			elRed.classList.add("on");
+			
+				function offColorRed(){
+					elRed.classList.remove("on");
+				}
+					
+				setTimeout(offColorRed, 2000);	
+
+			function onColorYellow(){
+				elYellow.classList.add("on");
+			}
+		
+			setTimeout(onColorYellow, 2000);	
+			
+			function offColorYellow(){
+				elYellow.classList.remove("on");
+			}
+				setTimeout(offColorYellow, 4000);
+				
+			function onColorGreen(){
+				elGreen.classList.add("on");
+			}
+		
+			setTimeout(onColorGreen, 4000);	
+			
+			function offColorGreen(){
+				elGreen.classList.remove("on");
+			}
+			
+			setTimeout(offColorGreen, 6000);
+			
+			setTimeout(onColorYellow, 6000);	
+			
+			function offColorYellow(){
+				elYellow.classList.remove("on");
+			}
+			
+			setTimeout(offColorYellow, 8000);	
+		};
+
+	
+		function changeColorRepeat(){
+			setInterval(changeColor, 8000);		
+		}
+		
+		changeColor();
+		changeColorRepeat();		
+		
+	</script>
+	
+</body>
+</html>

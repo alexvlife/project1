@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+	<!--
+
+	Задача:
+
+	Создать функцию которая выводит время 
+	в html и обновляет значения каждую секунду. 
+	Время выводить в формате чч:мм:cc, при этом 
+	часы, минуты и секунды отобразить разными цветами. 
+
+	-->
+
+	
+	<table>
+		<tbody>
+			<tr>
+				<th>чч</th>
+				<th>мм</th>
+				<th>сс</th>
+			</tr>
+			<tr>
+				<td id="hh" style="color:red;"></td>
+				<td id="mm" style="color:green;"></td>
+				<td id="ss" style="color:blue;"></td>
+			</tr>
+		</tbody>
+	</table>	
+	
+	<style>
+	
+		table th{
+			font-size:25px;
+			text-align: right;
+		}
+		table tr{
+			font-size:35px;
+		}
+	
+	</style>
+	
+	<script>
+	
+		var elTdHours = document.getElementById("hh");
+		var elTdMin = document.getElementById("mm");
+		var elTdSec = document.getElementById("ss");
+
+		function getTimeNow() {
+		
+			var dateNow = new Date();
+			
+			var hours = dateNow.getHours();
+			var min = dateNow.getMinutes();
+			var sec = dateNow.getSeconds();	
+			
+			var zeroH = '';
+			var zeroM = '';
+			var zeroS = '';
+			
+			if(hours < 10) zeroH = '0';			
+			if(min < 10) zeroM = '0';
+			if(sec < 10) zeroS = '0';			
+			
+			elTdHours.innerHTML = zeroH + hours;
+			elTdMin.innerHTML = ':' + zeroM + min;
+			elTdSec.innerHTML = ':' + zeroS + sec;
+		}
+
+		setInterval(getTimeNow, 1);
+		
+	</script>
+
+</script>
+
+	
+</body>
+</html>
