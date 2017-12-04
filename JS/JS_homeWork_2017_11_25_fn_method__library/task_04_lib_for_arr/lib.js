@@ -32,20 +32,23 @@
 		//расчет среднего арифметического значения элементов переданного массива;			
 		calcAverage: function(arr){
 			
+			var averageValueTemp = 0;
 			var sum = 0;
 		
 			for (var i = 0; i < arr.length; i++) {
 				sum += arr[i];	
 			}
 			
-			return averageValue = parseInt(sum/arr.length);
+			return averageValueTemp = parseInt(sum/arr.length);
 		},		
 				
 		
 		//создание копии (клонирование) переданного массива
 		arrayClone: function(arr){
 			
-			return arrClone = arr.slice();
+			var arrCloneTemp = [];
+			
+			return arrCloneTemp = arr.slice();
 		},
 		
 	}
