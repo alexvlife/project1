@@ -71,7 +71,8 @@
 			elTdSec.innerHTML = ':' + zeroS + sec;
 		}
 
-		setInterval(getTimeNow, 1);
+		getTimeNow(); //чтобы время отобразилось сразу же при загрузке страницы (без задержки 1с).
+		setInterval(getTimeNow, 1000); //time update
 		
 	</script>
 
