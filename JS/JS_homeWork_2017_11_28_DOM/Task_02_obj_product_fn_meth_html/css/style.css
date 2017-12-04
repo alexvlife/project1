@@ -1,0 +1,9 @@
+.product {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 300px;
+    min-height: 300px;
+    border: 1px solid gray;
+}
