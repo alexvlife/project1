@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+	<style>
+
+	</style>
+    
+</head>
+<body>
+
+<script>
+
+	var textStr = prompt('Напишите текст на русском языке, который хотите зашифровать "шифром Цезаря" ', '');
+		textStr = textStr.toLowerCase();
+		
+	var offset = +(prompt('Задайте смещение для шифра', ''));
+	var textArr = textStr.split('');
+	var textCode = [];
+	var alphabetRus = ['а','б','в','г','д','е','ё','ж','з','и','й','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я'];
+
+	for(var i = 0; i < textArr.length; i++){
+		for(var j = 0; j < alphabetRus.length; j++){
+			if(textArr[i] == alphabetRus[j]){
+				if((j+offset) < 0){ //отрицательное смещение
+					textCode[i] = alphabetRus[j + offset + alphabetRus.length];
+					break;
+				}else if((j+offset) < alphabetRus.length){
+					textCode[i] = alphabetRus[j + offset];
+					break;
+				}else if((j+offset) >= alphabetRus.length){  //когда смещение выходит за пределы длины алфавита
+					textCode[i] = alphabetRus[j + offset - alphabetRus.length];
+					break;
+				}		
+			}else {
+				textCode[i] = textArr[i]; //для символов,кроме букв.
+			}
+		}
+	}
+
+	alert(textCode.join(''));
+
+</script>
+    
+</body>
+</html>
