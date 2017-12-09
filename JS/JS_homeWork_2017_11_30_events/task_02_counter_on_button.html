@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+	<style>
+		#counterBtn {
+			width: 220px;
+			font-size: 2em;
+		}
+
+		p {
+			font-size: 1.5em;
+		}
+	</style>
+</head>
+<body>
+	<!--
+	Задача:
+
+        Реализовать счётчик нажатий на 
+        кнопку: Дана кнопка внутри неё 
+        записана цифра. При клике на 
+        кнопку – её значение должно 
+        увеличиваться на единицу.
+	-->
+	<p>Кнопка-счетчик</p><br>
+	<input type="button" id="counterBtn" value="0" onclick="doCounter('counterBtn')">
+	
+	<script>
+
+		function counter(){
+			var counterValue = 1;
+
+			return function(){
+				return counterValue++;
+			}
+		}
+
+		var countValue = counter();
+
+		function doCounter(idName){
+			var elBtn = document.getElementById(idName)
+			elBtn.setAttribute('value', countValue());
+		};
+
+	</script>
+
+</body>
+</html>

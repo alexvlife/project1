@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<section class="top_info">
+		<p>При нажатии клавиши на клавиатуре, будет подсвечена нажатая клавиша на изображенной ниже клавиатуре,
+		   также будут выведены значение, keyCode и UTF-code нажатой клавиши.</p>
+		<article>
+			<span>Здесь будет выводиться значение нажатой клавиши</span>
+			<div id="keyValue" class="block">getChar</div>
+		</article>
+
+		<article>
+			<span>Здесь будет выводиться keyCode нажатой клавиши</span>
+			<div id="keyCode" class="block">keyCode</div>
+		</article>
+			
+		<article>		
+			<span>Здесь будет выводиться UTFcode нажатой клавиши</span>
+			<div id="UTFcode" class="block">UTFcode</div>
+		</article>
+	</section>
+
+	<section class="keyboard">
+		<ul class="line_keyboard">
+			<li id="49" class="key"><span class="eng_char">1</span><span class="rus_char">!</span></li> 
+			<li id="50" class="key"><span class="eng_char">2</span><span class="rus_char">@</span></li> 
+			<li id="51" class="key"><span class="eng_char">3</span><span class="rus_char">#</span></li>
+			<li id="52" class="key"><span class="eng_char">4</span><span class="rus_char">$</span></li>
+			<li id="53" class="key"><span class="eng_char">5</span><span class="rus_char">%</span></li>
+			<li id="54" class="key"><span class="eng_char">6</span><span class="rus_char">^</span></li>
+			<li id="55" class="key"><span class="eng_char">7</span><span class="rus_char">&</span></li>
+			<li id="56" class="key"><span class="eng_char">8</span><span class="rus_char">*</span></li>
+			<li id="57" class="key"><span class="eng_char">9</span><span class="rus_char">(</span></li>
+			<li id="48" class="key"><span class="eng_char">0</span><span class="rus_char">)</span></li>
+			<li id="189" class="key"><span class="eng_char">-</span><span class="rus_char">_</span></li>
+			<li id="187" class="key"><span class="eng_char">+</span><span class="rus_char">=</span></li>
+		</ul>
+		<ul class="line_keyboard">
+			<li id="81" class="key"><span class="eng_char">Q</span><span class="rus_char">Й</span></li> 
+			<li id="87" class="key"><span class="eng_char">W</span><span class="rus_char">Ц</span></li> 
+			<li id="69" class="key"><span class="eng_char">E</span><span class="rus_char">У</span></li>
+			<li id="82" class="key"><span class="eng_char">R</span><span class="rus_char">К</span></li>
+			<li id="84" class="key"><span class="eng_char">T</span><span class="rus_char">Е</span></li>
+			<li id="89" class="key"><span class="eng_char">Y</span><span class="rus_char">Н</span></li>
+			<li id="85" class="key"><span class="eng_char">U</span><span class="rus_char">Г</span></li>
+			<li id="73" class="key"><span class="eng_char">I</span><span class="rus_char">Ш</span></li>
+			<li id="79" class="key"><span class="eng_char">O</span><span class="rus_char">Щ</span></li>
+			<li id="80" class="key"><span class="eng_char">P</span><span class="rus_char">З</span></li>
+			<li id="219" class="key"><span class="eng_char">[</span><span class="rus_char">Х</span></li>
+			<li id="221" class="key"><span class="eng_char">]</span><span class="rus_char">Ъ</span></li>
+		</ul>
+		<ul class="line_keyboard">
+			<li id="65" class="key"><span class="eng_char">A</span><span class="rus_char">Ф</span></li> 
+			<li id="83" class="key"><span class="eng_char">S</span><span class="rus_char">Ы</span></li> 
+			<li id="68" class="key"><span class="eng_char">D</span><span class="rus_char">В</span></li>
+			<li id="70" class="key"><span class="eng_char">F</span><span class="rus_char">А</span></li>
+			<li id="71" class="key"><span class="eng_char">G</span><span class="rus_char">П</span></li>
+			<li id="72" class="key"><span class="eng_char">H</span><span class="rus_char">Р</span></li>
+			<li id="74" class="key"><span class="eng_char">J</span><span class="rus_char">О</span></li>
+			<li id="75" class="key"><span class="eng_char">K</span><span class="rus_char">Л</span></li>
+			<li id="76" class="key"><span class="eng_char">L</span><span class="rus_char">Д</span></li>
+			<li id="186" class="key"><span class="eng_char">;</span><span class="rus_char">Ж</span></li>
+			<li id="222" class="key"><span class="eng_char">'</span><span class="rus_char"Э</span></li>
+		</ul>
+		<ul class="line_keyboard">
+			<li id="90" class="key"><span class="eng_char">Z</span><span class="rus_char">Я</span></li> 
+			<li id="88" class="key"><span class="eng_char">X</span><span class="rus_char">Ч</span></li> 
+			<li id="67" class="key"><span class="eng_char">C</span><span class="rus_char">С</span></li>
+			<li id="86" class="key"><span class="eng_char">V</span><span class="rus_char">М</span></li>
+			<li id="66" class="key"><span class="eng_char">B</span><span class="rus_char">И</span></li>
+			<li id="78" class="key"><span class="eng_char">N</span><span class="rus_char">Т</span></li>
+			<li id="77" class="key"><span class="eng_char">M</span><span class="rus_char">Ь</span></li>
+			<li id="188" class="key"><span class="eng_char">,</span><span class="rus_char">Б</span></li>
+			<li id="190" class="key"><span class="eng_char">.</span><span class="rus_char">Ю</span></li>
+			<li id="191" class="key"><span class="eng_char">/</span><span class="rus_char">.</span></li>
+		</ul>
+
+	</section>
+
+    <script src="js/script.js"></script>
+       
+</body>
+</html>

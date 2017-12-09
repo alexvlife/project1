@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+	<style>
+		.block {
+			float: left;
+			margin: 30px;
+			width: 300px;
+			height: 300px;
+			background-color: orange;
+			font-family: Arial;
+			text-align: center;
+		}
+
+		.bg_color_green {
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<!--
+	Задача:
+
+		Даны несколько div элементов на html.
+		По первому нажатию на каждый div 
+		он перекрашивается зеленым цветом, 
+		при повторном нажатии перекрашивается 
+		обратно и так далее каждый клик 
+		происходит чередование цвета. 
+	-->
+
+
+	<div id="block1" class="block">
+		<h1>Блок 1</h1>
+		<p>Меняю цвет при нажатии.</p>
+	</div>
+
+	<div id="block2" class="block">
+		<h1>Блок 2</h1>
+		<p>И я меняю цвет при нажатии.</p>
+	</div>
+
+	
+	<script>
+		function click(idName) {
+		
+			var element = document.getElementById(idName);
+			
+			function changeColor() {
+				
+				if(element.style.backgroundColor === 'green'){ //сначала задаем условие для green, иначе цвет поменяется на зеленый только со второго щелчка
+					element.style.backgroundColor = 'orange';
+				} else {
+					element.style.backgroundColor = 'green';
+				}
+
+			}
+			
+			element.onclick = changeColor;	
+		}
+	
+		click('block1');
+		click('block2');
+	</script>
+
+</body>
+</html>
