@@ -7,7 +7,7 @@
 
     $inputDate = $_POST['date']; // 2017-12-21
     $dateTime = strtotime($inputDate); 
-    $inputDate = date('d.m.Y',$dateTime); // 12.21.2017
+    $inputDate = date('d.m.Y',$dateTime); // 21.12.2017
 
     $inputHeader = $_POST['header'];
 
