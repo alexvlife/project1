@@ -25,8 +25,8 @@ var request = $.ajax({
 
 request.done(function( msg ){
     $( "#logDate" ).html( msg.date );
-    $( "#logHeader" ).html( msg.desc );
-    $( "#logDesc" ).html( msg.header );
+    $( "#logHeader" ).html( msg.header );
+    $( "#logDesc" ).html( msg.desc );
     $( "#logImg" ).html( '<img src="img/' + msg.date + '.jpg" width=800 height=600>' );
 });
 

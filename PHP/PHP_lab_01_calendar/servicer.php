@@ -4,6 +4,6 @@
 
     $arrTextOfFile = explode(";", $file);
 
-    echo json_encode(array("date" => $arrTextOfFile[0], "desc" => $arrTextOfFile[1], "header" => $arrTextOfFile[2]));
+    echo json_encode(array("date" => $arrTextOfFile[0], "header" => $arrTextOfFile[1], "desc" => $arrTextOfFile[2]));
 
 ?>
