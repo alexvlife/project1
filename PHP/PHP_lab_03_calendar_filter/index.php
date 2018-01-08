@@ -6,9 +6,11 @@
     <title>php_lab01_calendar</title>
     
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_timeline.css">
     
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/app.js"></script>
+
 </head>
 
 <body>
@@ -85,26 +87,67 @@
         
         <div class="content">
            
-            <h1>Календарь событий</h1>
+			<div class="top">
+				<h1>Календарь событий</h1>
+				<div class="date_range">
+					<span>Выберите диапазон дат:</span>
+					<form action="timeline.php" method="POST">
+						<p>
+							<label for="firstDate">От:</label>
+							<input type="date" name="firstDate" id="firstDate">
+							<label for="lastDate">До:</label>
+							<input type="date" name="lastDate" id="lastDate">
+							<!-- <input type="submit" value="Показать" id="submit"> -->
+							<button type="button" id="btn">Показать</button>
+						</p>
+                    </form>
+				</div>
+			</div>
             
-            <div class="date">
-                <span class="heads">Сегодня:</span>
-                <h2 id="logDate"><!--Здесь выводим..Дату--></h2>
-            </div>
-            
-            <div class="header">
-                <span class="heads">Событие:</span>
-                <h2 id="logHeader"><!--Здесь выводим..Заголовок события--></h2>
-            </div>
-            
-            <div id="logImg"><!--Здесь выводим..Картинку--></div>
+				<div id="msgTimeline">
+					<div class="row">
+						<div class="date">
+							<span class="heads">Сегодня:</span>
+							<h2 id="logDate"><!--Здесь выводим..Дату--></h2>
+						</div>
+						
+						<div class="header">
+							<span class="heads">Событие:</span>
+							<h2 id="logHeader"><!--Здесь выводим..Заголовок события--></h2>
+						</div>
+					</div>	
+					
+					<div id="logImg"><!--Здесь выводим..Картинку--></div>
 
-            <div class="desc">
-                <p id="logDesc"><!--Здесь выводим..Описание события --></p>
-            </div>
+					<div class="desc">
+						<p id="logDesc"><!--Здесь выводим..Описание события --></p>
+					</div>
+				</div>
         </div>
     </div>
- 
+ <!--
+ <script>
+ 		function click(idName) {
+		
+			var element = document.getElementById(idName);
+			
+			function changeColor() {
+				
+				if(element.style.backgroundColor === 'green'){ //сначала задаем условие для green, иначе цвет поменяется на зеленый только со второго щелчка
+					element.style.backgroundColor = 'orange';
+				} else {
+					element.style.backgroundColor = 'green';
+				}
+
+			}
+			
+			element.onclick = changeColor;	
+		}
+	
+		click('btn');
+ </script>
+ -->
+<script src="js/timeline.js"></script>
 </body>
 
 </html>

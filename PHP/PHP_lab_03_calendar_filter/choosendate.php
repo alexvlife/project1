@@ -6,6 +6,7 @@
     <title>php_lab01_calendar</title>
     
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style_timeline.css">
 </head>
 
 <body>

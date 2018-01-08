@@ -14,6 +14,7 @@ function formatDate(date) {
 
 var date = new Date(); // 23 Дек 2017
 var dt = formatDate(date); // '23.12.2017'
+//var dt = "27.12.2017"; // '23.12.2017'
 
 
 var request = $.ajax({
@@ -35,3 +36,4 @@ request.fail(function( jqXHR, textStatus ){
 });
 
 console.log("script running");
+
